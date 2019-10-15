@@ -24,6 +24,12 @@ $(function () {
     return false;
   });
 
+  $('.card-image').on('click', function () {
+    let title = $(this).data('title');
+    $('.section.' + title).slideToggle();
+  });
+
+
   //ページトップへもどる
   $('#js-pageTop').on('click', function () {
     $('body,html').animate({

@@ -54,7 +54,8 @@ li {
   padding: 10px;
   cursor: pointer;
   text-align: center;
-  background-color: #ccc;
+  background-color: #1d1d1d;
+  color: #fff;
 }
 
 .hover-action-01 {
@@ -125,7 +126,7 @@ li {
 }
 
 #aboutme .inner,
-#skill .inner {
+#skills .inner {
   max-width: 1000px;
 }
 
@@ -293,6 +294,10 @@ li {
  FEATURE
 ---------------------------------*/
 
+#feature {
+  background-color: #fff;
+}
+
 #feature .section-body {
   display: flex;
   flex-wrap: wrap;
@@ -342,18 +347,31 @@ li {
   flex-basis: 62%;
 }
 
+#aboutme li {
+  display: flex;
+  margin: 5px 0;
+}
+
+.job {
+  width: 47.41px;
+}
+
+.jobp {
+  width: 522.98px;
+}
+
 /*--------------------------------
- SKILL
+ SKILLS
 ---------------------------------*/
 
-#skill .card-wrapper {
+#skills .card-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
 }
 
-#skill .card {
+#skills .card {
   display: flex;
   flex-basis: 46%;
   flex-wrap: wrap;
@@ -361,19 +379,22 @@ li {
   margin-bottom: 50px;
 }
 
-#skill .skill-icon {
+#skills .skill-icon {
   flex-basis: 60px;
+  height: 60px;
+  width: 60px;
 }
 
-#skill .skill-desc {
+#skills .skill-desc {
   flex-basis: calc(100% - 60px - 30px);
 }
 
-#skill .skill-desc-title {
+#skills .skill-desc-title {
   margin-bottom: 3px;
+  line-height: 60px;
 }
 
-#skill .rate {
+#skills .rate {
   font-size: 16px;
   position: relative;
   display: inline-block;
@@ -382,8 +403,8 @@ li {
   letter-spacing: .3em;
 }
 
-#skill .rate:before,
-#skill .rate:after {
+#skills .rate:before,
+#skills .rate:after {
   line-height: 20px;
   position: absolute;
   top: 0;
@@ -393,39 +414,49 @@ li {
   content: "★★★★★";
 }
 
-#skill .rate:before {
+#skills .rate:before {
   color: #ddd;
 }
 
-#skill .rate:after {
+#skills .rate:after {
   overflow: hidden;
   white-space: nowrap;
   color: #f181b4;
 }
 
-#skill .rate1:after {
+#skills .rate1:after {
   width: 20px;
 }
 
-#skill .rate2:after {
+#skills .rate2:after {
   width: 40px;
 }
 
-#skill .rate3:after {
+#skills .rate3:after {
   width: 60px;
 }
 
-#skill .rate4:after {
+#skills .rate4:after {
   width: 80px;
 }
 
-#skill .rate5:after {
+#skills .rate5:after {
   width: 100px;
+}
+
+#skills .skill-icon-image {
+height: 60px;
+width: auto;
 }
 
 /*--------------------------------
  CONTACT
 ---------------------------------*/
+
+#contact {
+  background-color: #1d1d1d;
+  color: #fff;
+}
 
 #contact .contact-list ul {
   display: flex;
@@ -608,54 +639,54 @@ li {
     margin: 0 auto 20px;
   }
 
-  #skill .card-wrapper {
+  #skills .card-wrapper {
     width: 100%;
   }
 
-  #skill .card {
+  #skills .card {
     flex-basis: 100%;
   }
 
-  #skill .skill-icon {
+  #skills .skills-icon {
     flex-basis: 45px;
   }
 
-  #skill .skill-icon img {
+  #skills .skills-icon img {
     width: 45px;
   }
 
-  #skill .skill-desc {
+  #skills .skills-desc {
     flex-basis: calc(100% - 45px - 10px);
   }
 
-  #skill .rate {
+  #skills .rate {
     font-size: 15px;
     height: 15px;
   }
 
-  #skill .rate:before,
-  #skill .rate:after {
+  #skills .rate:before,
+  #skills .rate:after {
     line-height: 15px;
     height: 15px;
   }
 
-  #skill .rate1:after {
+  #skills .rate1:after {
     width: 15px;
   }
 
-  #skill .rate2:after {
+  #skills .rate2:after {
     width: 35px;
   }
 
-  #skill .rate3:after {
+  #skills .rate3:after {
     width: 55px;
   }
 
-  #skill .rate4:after {
+  #skills .rate4:after {
     width: 75px;
   }
 
-  #skill .rate5:after {
+  #skills .rate5:after {
     width: 95px;
   }
 
