@@ -138,12 +138,16 @@ li {
   align-items: center;
   justify-content: center;
   height: 86vh;
+  background-image: url("../img/header/background.jpg");
+  background-position: 0% 20%;
+  background-size: cover;
 }
 
 #header .logo {
   position: relative;
   margin-bottom: 30px;
   text-align: center;
+  color: #fff;
 }
 
 #header .logo-title {
