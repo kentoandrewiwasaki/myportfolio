@@ -35,6 +35,14 @@ li {
   list-style: none;
 }
 
+.fas {
+  margin-right: 10px;
+}
+
+.fas-header {
+  margin-right: 5px;
+}
+
 .text-bold {
   font-weight: bold;
 }
