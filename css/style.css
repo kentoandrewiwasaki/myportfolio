@@ -26,7 +26,6 @@ object {
   display: block;
   max-width: 100%;
   height: auto;
-  vertical-align: bottom;
   border: none;
 }
 
@@ -103,10 +102,6 @@ li {
 
 .section {
   padding: 100px 0;
-}
-
-.section:nth-of-type(odd) {
-  background-color: #f7f7f7;
 }
 
 .section .inner {
@@ -307,7 +302,7 @@ li {
 ---------------------------------*/
 
 #feature {
-  background-color: #fff;
+  background-color: #f7f7f7;
 }
 
 #feature .section-body {
@@ -332,6 +327,10 @@ li {
 /*--------------------------------
  ABOUTME
 ---------------------------------*/
+
+#aboutme {
+  background-color: #fff;
+}
 
 #aboutme .section-body {
   display: flex;
@@ -375,6 +374,10 @@ li {
 /*--------------------------------
  SKILLS
 ---------------------------------*/
+
+#skills {
+  background-color: #f7f7f7;
+}
 
 #skills .card-wrapper {
   display: flex;
