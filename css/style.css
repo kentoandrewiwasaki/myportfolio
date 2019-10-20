@@ -1,5 +1,3 @@
-/* CSS Document */
-
 *,
 *:before,
 *:after {
@@ -7,7 +5,7 @@
 }
 
 body {
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 15px;
   line-height: 1.8;
   letter-spacing: .8px;
@@ -25,7 +23,6 @@ video,
 object {
   display: block;
   max-width: 100%;
-  height: auto;
   border: none;
 }
 
@@ -34,16 +31,18 @@ li {
   list-style: none;
 }
 
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .fas {
   margin-right: 10px;
 }
 
 .fas-header {
   margin-right: 5px;
-}
-
-.text-bold {
-  font-weight: bold;
 }
 
 .pc {
@@ -93,9 +92,6 @@ li {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .12);
 }
 
-/*--------------------------------
- 全体
----------------------------------*/
 #wrapper {
   padding-top: 68px;
 }
@@ -133,9 +129,6 @@ li {
   max-width: 1000px;
 }
 
-/*--------------------------------
-ヘッダー
----------------------------------*/
 #header {
   display: flex;
   align-items: center;
@@ -167,10 +160,6 @@ li {
   letter-spacing: .2em;
 }
 
-/*--------------------------------
- グローバルナビ
----------------------------------*/
-
 #gnav {
   background-color: #fff;
   -webkit-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
@@ -185,7 +174,6 @@ li {
   left: 0;
   width: 100%;
 }
-
 
 #gnav ul {
   display: flex;
@@ -233,9 +221,6 @@ li {
   width: 100%;
 }
 
-/*--------------------------------
- Card
----------------------------------*/
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -264,23 +249,6 @@ li {
   font-size: 10px;
 }
 
-.card img.fadein {
-  -webkit-transition: 1.5s;
-  -moz-transition: 1.5s;
-  -ms-transition: 1.5s;
-  -o-transition: 1.5s;
-  transition: 1.5s;
-  opacity: 0;
-}
-
-.card img.fadein.lazyloaded {
-  opacity: 1;
-}
-
-/*--------------------------------
- WORKS
----------------------------------*/
-
 #works .card {
   flex-basis: 31%;
   margin-bottom: 60px;
@@ -297,18 +265,22 @@ li {
   margin-bottom: 0;
 }
 
-/*--------------------------------
- FEATURE
----------------------------------*/
+.work-image {
+  width: 403px;
+  height: 214px;
+}
 
 #feature {
   background-color: #f7f7f7;
+  border-bottom: solid #ccc 1px;
 }
 
 #feature .section-body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin:0 auto;
+  width: 60%;
 }
 
 #feature .section-image {
@@ -321,12 +293,68 @@ li {
 }
 
 #feature .section-desc {
-  flex-basis: 37%;
+  width: 100%;
 }
 
-/*--------------------------------
- ABOUTME
----------------------------------*/
+#feature .feature-info > li {
+  padding: 16px 8px;
+  border-bottom: solid #ccc 1px;
+}
+
+.pull-left {
+  float: left;
+  box-sizing: border-box;
+}
+
+#feature .field {
+  font-weight: bold;
+  width: 20%;  
+}
+
+#feature .field-2 {
+  font-weight: bold;
+  width: 20%;
+  margin-top: 10px;
+}
+
+#feature .description {
+  width: 80%;  
+}
+
+#feature .description-2 {
+  width: 80%;
+  margin-top: 10px;
+}
+
+ul.tech > li {
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+.opencv-func {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.opencv-btn {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+
+.movie {
+  margin: 10px 0;
+}
 
 #aboutme {
   background-color: #fff;
@@ -371,10 +399,6 @@ li {
   width: 522.98px;
 }
 
-/*--------------------------------
- SKILLS
----------------------------------*/
-
 #skills {
   background-color: #f7f7f7;
 }
@@ -384,11 +408,12 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
+  padding-left: 5%;
 }
 
 #skills .card {
   display: flex;
-  flex-basis: 46%;
+  flex-basis: 30%;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 50px;
@@ -464,10 +489,6 @@ height: 60px;
 width: auto;
 }
 
-/*--------------------------------
- CONTACT
----------------------------------*/
-
 #contact {
   background-color: #1d1d1d;
   color: #fff;
@@ -506,10 +527,6 @@ width: auto;
   text-align: center;
 }
 
-/*--------------------------------
- Footer
----------------------------------*/
-
 #footer {
   background-color: #1d1d1d;
 }
@@ -522,202 +539,4 @@ width: auto;
   font-size: 10px;
   text-align: center;
   color: #8c8c8c;
-}
-
-/*media Queries 767
-----------------------------------------------------*/
-
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  .pc {
-    display: none;
-  }
-
-  .sp {
-    display: block;
-  }
-
-  .hover-action-01 {
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-
-  .hover-action-01:hover {
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
-    transition: none;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none;
-  }
-
-
-  #wrapper {
-    padding-top: 82px;
-  }
-
-  #header {
-    height: 70vh;
-  }
-
-  #header .logo-title {
-    font-size: 28px;
-    letter-spacing: .16em;
-  }
-
-  #header .logo-desc {
-    font-size: 11px;
-  }
-
-  #gnav {
-    padding: 15px 0;
-  }
-
-  #gnav li {
-    font-size: 13px;
-    padding: 2px 15px;
-  }
-
-  #gnav li a {
-    padding: 0;
-  }
-
-  #gnav li a:hover {
-    opacity: 1;
-  }
-
-  #gnav li a::after {
-    display: none;
-  }
-
-  .section {
-    padding: 60px 0;
-  }
-
-  .section .inner {
-    padding: 0 15px;
-  }
-
-  .section .section-title-area {
-    margin-bottom: 20px;
-  }
-
-  .section .section-title {
-    font-size: 22px;
-  }
-
-  .card-caption {
-    text-align: left;
-  }
-
-  .card-caption-title {
-    font-size: 10px;
-  }
-
-  #works .card:nth-child(2n+1):nth-last-child(-n+2),
-  #works .card:nth-child(2n+1):nth-last-child(-n+2)~div {
-    margin-bottom: 0;
-  }
-
-  #works .card {
-    flex-basis: 48%;
-    margin-bottom: 30px;
-  }
-
-  #feature .section-image,
-  #feature .section-desc {
-    flex-basis: 100%;
-  }
-
-  #feature .section-image {
-    margin-bottom: 20px;
-  }
-
-  #about.section-image,
-  #about .section-desc {
-    flex-basis: 100%;
-  }
-
-  #about .section-image {
-    flex-basis: 100px;
-    margin: 0 auto 20px;
-  }
-
-  #skills .card-wrapper {
-    width: 100%;
-  }
-
-  #skills .card {
-    flex-basis: 100%;
-  }
-
-  #skills .skills-icon {
-    flex-basis: 45px;
-  }
-
-  #skills .skills-icon img {
-    width: 45px;
-  }
-
-  #skills .skills-desc {
-    flex-basis: calc(100% - 45px - 10px);
-  }
-
-  #skills .rate {
-    font-size: 15px;
-    height: 15px;
-  }
-
-  #skills .rate:before,
-  #skills .rate:after {
-    line-height: 15px;
-    height: 15px;
-  }
-
-  #skills .rate1:after {
-    width: 15px;
-  }
-
-  #skills .rate2:after {
-    width: 35px;
-  }
-
-  #skills .rate3:after {
-    width: 55px;
-  }
-
-  #skills .rate4:after {
-    width: 75px;
-  }
-
-  #skills .rate5:after {
-    width: 95px;
-  }
-
-  #contact .contact-list ul {
-    width: 100px;
-  }
-
-  #contact .contact-list li img {
-    width: 30px;
-  }
-
-  #contact .contact-list-desc {
-    font-size: 12px;
-  }
-
-  #footer .inner {
-    padding: 20px 0;
-  }
 }

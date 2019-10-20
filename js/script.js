@@ -1,18 +1,8 @@
-// PhotoSwipe
-initPhotoSwipeFromDOM('.my-gallery');
-
 $(function () {
 
-  $('.card-caption').on('click', 'a', function (e) {
-    e.stopPropagation();
-  });
-
   let $nav = $('#gnav');
-  let offset = $nav.offset();
   let navHeight = $nav.innerHeight();
-  let headerInner = $('#header .inner');
 
-  //ページ内スクロール
   $('a[href^="#"]').on('click', function () {
     let speed = 300;
     let href = $(this).attr("href");
@@ -23,14 +13,17 @@ $(function () {
     }, speed, "swing");
     return false;
   });
-
+  
   $('.card-image').on('click', function () {
     let title = $(this).data('title');
     $('.section.' + title).slideToggle();
   });
 
+  $('.opencv-btn').on('click', function () {
+    let title = $(this).data('title');
+    $('.' + title).slideToggle();
+  });
 
-  //ページトップへもどる
   $('#js-pageTop').on('click', function () {
     $('body,html').animate({
       scrollTop: 0
