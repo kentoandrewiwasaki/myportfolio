@@ -2,22 +2,36 @@ $(function () {
 
   let $nav = $('#gnav');
   let navHeight = $nav.innerHeight();
+  let speed = 300;
+  let winScrollTop
 
   $('a[href^="#"]').on('click', function () {
-    let speed = 300;
-    let href = $(this).attr("href");
-    let target = $(href == "#" || href == "" ? 'html' : href);
+    let href = $(this).attr('href');
+    let target = $(href == '#' || href == '' ? 'html' : href);
     let position = target.offset().top - navHeight;
-    $("html, body").animate({
+    $('html, body').animate({
       scrollTop: position
-    }, speed, "swing");
+    }, speed);
     return false;
   });
-  
-  $('.card-image').on('click', function () {
-    let title = $(this).data('title');
-    $('.section.' + title).slideToggle();
+
+  $('.js-modal-open').each(function(){
+    $(this).on('click',function(){
+      winScrollTop = $(window).scrollTop();
+      let title = $(this).data('title');
+      let modal = document.getElementsByClassName(title);
+      $(modal).fadeIn();
+      return false;
+    });
   });
+  
+  $('.js-modal-close').on('click',function(){
+    $('.js-modal').fadeOut();
+    $('html, body').stop().animate({
+      scrollTop: winScrollTop
+    }, speed);
+    return false;
+  }); 
 
   $('.opencv-btn').on('click', function () {
     let title = $(this).data('title');
@@ -25,9 +39,9 @@ $(function () {
   });
 
   $('#js-pageTop').on('click', function () {
-    $('body,html').animate({
+    $('html, body').animate({
       scrollTop: 0
-    }, 300);
+    }, speed);
     return false;
   });
 

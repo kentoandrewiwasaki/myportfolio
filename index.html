@@ -133,7 +133,7 @@
             <h2 class="section-title"><i class="fas fa-briefcase"></i>WORKS</h2>
             <div class="section-intro">
               <div class="section-text">
-                  画像をクリックすると、下に詳細が表示されます
+                  画像をクリックすると、詳細ウィンドウが表示されます
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@
 <!---------------------------------------------- MyPortfolio ----------------------------------------------->
 
             <div class="card">
-              <a data-title="myportfolio" class="card-image hover-action-01">
+              <a data-title="myportfolio" class="card-image hover-action-01 js-modal-open">
                 <img class="work-image" src="img/works/myportfolio.jpg">
               </a>
               <div class="card-caption">
@@ -158,7 +158,7 @@
 <!---------------------------------------------- ChatSpace ----------------------------------------------->
 
             <div class="card">
-              <a data-title="chatspace" class="card-image hover-action-01">
+              <a data-title="chatspace" class="card-image hover-action-01 js-modal-open">
                 <img class="work-image" src="img/works/chatspace.jpg">
               </a>
               <div class="card-caption">
@@ -174,7 +174,7 @@
 <!---------------------------------------------- Mercari ----------------------------------------------->
 
             <div class="card">
-              <a data-title="mercari" class="card-image hover-action-01">
+              <a data-title="mercari" class="card-image hover-action-01 js-modal-open">
                 <img class="work-image" src="img/works/mercari.jpg">
               </a>
               <div class="card-caption">
@@ -190,7 +190,7 @@
 <!---------------------------------------------- OpenCV ----------------------------------------------->
 
             <div class="card">
-              <a data-title="opencv_converter" class="card-image hover-action-01">
+              <a data-title="opencv_converter" class="card-image hover-action-01 js-modal-open">
                 <img class="work-image" src="img/works/opencv_converter.jpg">
               </a>
               <div class="card-caption">
@@ -206,7 +206,7 @@
 <!---------------------------------------------- LaravelBlog ----------------------------------------------->
 
             <div class="card">
-              <a data-title="laravelblog" class="card-image hover-action-01">
+              <a data-title="laravelblog" class="card-image hover-action-01 js-modal-open">
                 <img class="work-image" src="img/works/laravelblog.jpg">
               </a>
               <div class="card-caption">
@@ -222,7 +222,7 @@
 <!---------------------------------------------- CommingSoon ----------------------------------------------->
 
             <div class="card">
-                <a data-size="960x720" data-title="comingsoon" class="card-image hover-action-01">
+                <a data-size="960x720" data-title="comingsoon" class="card-image hover-action-01 js-modal-open">
                   <img class="work-image" src="img/works/comingsoon.png">
                 </a>
                 <div class="card-caption">
@@ -243,12 +243,13 @@
 <!---------------------------------------------- MyPortFolio ----------------------------------------------->
 
 
-      <section class="section myportfolio" id="feature" style="display: none;">
-        <div class="inner">
+      <section class="modal js-modal myportfolio" id="feature">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="inner modal__content">
           <div class="section-title-area">
             <h2 class="section-title">MyPortfolio</h2>
           </div>
-          <div class="section-body ">
+          <div class="section-body">
             <div class="section-desc">
               <ul class="feature-info">
                 <li class="clearfix">
@@ -270,7 +271,7 @@
                 <li class="clearfix">
                   <p class="field pull-left">内容</p>
                   <p class="description pull-left">
-                    当サイトです。「Works」の各画像をクリックすると詳細が下に表示される動きなどはjQueryを使用しております。
+                    当サイトです。「Works」の各画像をクリックすると詳細ウィンドウが表示される動きなどはjQueryを使用しております。
                   </p>
                 </li>
                 <li class="clearfix">
@@ -307,6 +308,9 @@
                     約1週間
                   </p>
                 </li>
+                <li class="clearfix">
+                  <a class="js-modal-close" href="">ウィンドウを閉じる</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -316,8 +320,9 @@
 <!---------------------------------------------- ChatSpace ----------------------------------------------->
 
 
-      <section class="section chatspace" id="feature" style="display: none;">
-        <div class="inner">
+      <section class="modal js-modal chatspace" id="feature">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="inner modal__content">
           <div class="section-title-area">
             <h2 class="section-title">ChatSpace</h2>
           </div>
@@ -417,6 +422,9 @@
                     約2週間
                   </p>
                 </li>
+                <li class="clearfix">
+                  <a class="js-modal-close">ウィンドウを閉じる</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -425,8 +433,9 @@
 
 <!---------------------------------------------- Mercari ----------------------------------------------->
 
-      <section class="section mercari" id="feature" style="display: none;">
-        <div class="inner">
+      <section class="modal js-modal mercari" id="feature">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="inner modal__content">
           <div class="section-title-area">
             <h2 class="section-title">Mercari(Copy)</h2>
           </div>
@@ -532,6 +541,9 @@
                     約4週間
                   </p>
                 </li>
+                <li class="clearfix">
+                  <a class="js-modal-close" href="">ウィンドウを閉じる</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -541,10 +553,11 @@
 <!---------------------------------------------- OpenCV ----------------------------------------------->
 
 
-      <section class="section opencv_converter" id="feature" style="display: none;">
-        <div class="inner">
+      <section class="modal js-modal opencv_converter" id="feature">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="inner modal__content">
           <div class="section-title-area">
-            <h2 class="section-title">Opencv Converter</h2>
+            <h2 class="section-title">OpenCV Converter</h2>
           </div>
           <div class="section-body">
             <div class="section-image">
@@ -661,6 +674,9 @@
                     約1週間
                   </p>
                 </li>
+                <li class="clearfix">
+                  <a class="js-modal-close" href="">ウィンドウを閉じる</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -670,8 +686,9 @@
 <!---------------------------------------------- LaravelBlog ----------------------------------------------->
 
 
-      <section class="section laravelblog" id="feature" style="display: none;">
-        <div class="inner">
+      <section class="modal js-modal laravelblog" id="feature">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="inner modal__content">
           <div class="section-title-area">
             <h2 class="section-title">LaravelBlog</h2>
           </div>
@@ -770,6 +787,9 @@
                   <p class="description pull-left">
                     約1週間
                   </p>
+                </li>
+                <li class="clearfix">
+                  <a class="js-modal-close" href="">ウィンドウを閉じる</a>
                 </li>
               </ul>
             </div>
